@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1035216635708",
+    "firebase_url": "https://hemtakapp-d0e92.firebaseio.com",
+    "project_id": "hemtakapp-d0e92",
+    "storage_bucket": "hemtakapp-d0e92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035216635708:android:456e90a83347c0ad9b0039",
+        "android_client_info": {
+          "package_name": "com.example.hemtakapp_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035216635708-1771ul828mv22shtvdlpvrme5n45d0lr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKgtwjn_zVQi6ZRsu1uH6d9n0m795WUVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035216635708-1771ul828mv22shtvdlpvrme5n45d0lr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
