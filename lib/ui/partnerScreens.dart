@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:hemtak_app/HomePage/HomePageOfPartner.dart';
 import 'package:hemtak_app/ui/welcomePage.dart';
 import 'package:ndialog/ndialog.dart';
 
@@ -240,23 +241,29 @@ class _SignInPartnerState extends State<SignInPartner> {
       ),
     );
   }
-//ggg
+
   Widget _submitBtn() {
-    return Container(
-      width: 375,
-      padding: EdgeInsets.symmetric(vertical: 10),
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(30)),
-          gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: [Color(0xfff44336), Color(0xffe57373)])),
-      child: Text(
-        'تسجيل الدخول كشريك',
-        style: TextStyle(fontSize: 20, color: Colors.white),
-      ),
-    );
+    return FlatButton(
+        child: Container(
+          width: 375,
+          padding: EdgeInsets.symmetric(vertical: 10),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(30)),
+              gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [Color(0xfff44336), Color(0xffe57373)])),
+          child: Text(
+            'تسجيل الدخول كشريك',
+            style: TextStyle(fontSize: 20, color: Colors.white),
+          ),
+        ),
+        onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HomePagePartner()));
+          }
+        );
   }
 
   Widget _divider() {
