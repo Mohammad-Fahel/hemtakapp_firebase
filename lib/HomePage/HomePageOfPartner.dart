@@ -2,12 +2,13 @@ import 'dart:ui';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hemtak_app/HomePage/insideEvent.dart';
-import 'package:hemtak_app/slideMenu/volunter/About.dart';
-import 'package:hemtak_app/slideMenu/volunter/CodeRedeemingPage.dart';
-import 'package:hemtak_app/slideMenu/volunter/Setting.dart';
-import 'package:hemtak_app/slideMenu/volunter/Suggest.dart';
+import 'package:hemtak_app/slideMenu/partener/About.dart';
+import 'package:hemtak_app/slideMenu/partener/CodeRedeemingPage.dart';
+import 'package:hemtak_app/slideMenu/partener/Setting.dart';
+import 'package:hemtak_app/slideMenu/partener/Suggest.dart';
 import 'package:hemtak_app/services/hemtak.dart';
 import 'package:hemtak_app/services/user.dart';
+import 'package:hemtak_app/ui/partnerScreens.dart';
 import 'package:hemtak_app/ui/signInScreen.dart';
 import 'package:hemtak_app/ui/welcomePage.dart';
 import 'package:multiselect_formfield/multiselect_formfield.dart';
@@ -17,29 +18,18 @@ import 'package:provider/provider.dart';
 import 'package:hemtak_app/services/hemtak_list.dart';
 import 'package:hemtak_app/services/hemtak.dart';
 
-// import fullName of user from firebase
-class MainName extends StatelessWidget {
 
-  final Customer emailUser;
-  MainName({this.emailUser});
 
-  @override
-  Widget build(BuildContext context) {
-    return Text(emailUser.uid,
-        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 10));
-  }
-}
-
-class HomePageVolunteer extends StatefulWidget {
+class HomePagePartner extends StatefulWidget {
   final String header;
 
-  HomePageVolunteer({Key key, this.header}) : super(key: key);
+  HomePagePartner({Key key, this.header}) : super(key: key);
 
   @override
-  _HomePageVolunteerState createState() => _HomePageVolunteerState();
+  _HomePagePartnerState createState() => _HomePagePartnerState();
 }
 
-class _HomePageVolunteerState extends State<HomePageVolunteer> {
+class _HomePagePartnerState extends State<HomePagePartner> {
   Widget _eventCard() {
     return GestureDetector(
       onTap: () => Navigator.pushReplacement(
@@ -172,19 +162,13 @@ class _HomePageVolunteerState extends State<HomePageVolunteer> {
             child: Column(
               children: [
                 Icon(Icons.person_pin, size: 100),
-                Text("اسم الريادي",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20))
+                Text("اسم الشريك",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20))
               ],
             ),
             decoration: BoxDecoration(color: Colors.grey),
           ),
         ),
 
-        ListTile(
-          leading: Icon(Icons.assignment_turned_in),
-          title: Text('بادر'),
-          onTap: () => Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => Suggest())),
-        ),
         ListTile(
           leading: Icon(Icons.assignment_late),
           title: Text('عن همتك'),
@@ -211,18 +195,11 @@ class _HomePageVolunteerState extends State<HomePageVolunteer> {
         ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('تسجيل الخروج'),
-            onTap: () async {
-              if(  _auth.toString() == "AuthService") {
-                print("we are in if");
-                await _auth.signOut();
-              }
-              else {
-                print("we are in else");
-                await _auth.signOut();
+            onTap: () {
                 Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => SignInVolunteer()));
+                    MaterialPageRoute(builder: (context) => SignInPartner()));
               }
-            }),
+            ),
       ]),
     );
   }
@@ -261,32 +238,32 @@ class _HomePageVolunteerState extends State<HomePageVolunteer> {
                           fit: BoxFit.cover)),
                   child: ClipRRect(
                       child: BackdropFilter(
-                    filter: ImageFilter.blur(sigmaY: 1.5, sigmaX: 1.5),
-                    child: Column(
-                      children: [
-                        Container(
-                          width: MediaQuery.of(context).size.width,
-                          color: Colors.red[400].withOpacity(0.60),
-                          child: Text(
-                            "تصفح الفعاليات الريادية",
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 35.0,
-                                fontWeight: FontWeight.bold),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        SizedBox(height: 50),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        filter: ImageFilter.blur(sigmaY: 1.5, sigmaX: 1.5),
+                        child: Column(
                           children: [
-                            _mainStatistc("الترتيب المحلي", "المركز العاشر"),
-                            _mainStatistc("النقاط المكتسبة", "٧٥ نقطة"),
+                            Container(
+                              width: MediaQuery.of(context).size.width,
+                              color: Colors.red[400].withOpacity(0.60),
+                              child: Text(
+                                "تصفح الفعاليات الريادية",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 35.0,
+                                    fontWeight: FontWeight.bold),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                            SizedBox(height: 50),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                _mainStatistc("الترتيب المحلي", "المركز العاشر"),
+                                _mainStatistc("النقاط المكتسبة", "٧٥ نقطة"),
+                              ],
+                            ),
                           ],
                         ),
-                      ],
-                    ),
-                  ))),
+                      ))),
               SizedBox(height: 40),
               Container(
                 padding: EdgeInsets.only(right: 20),
@@ -354,9 +331,9 @@ Future<void> showFilterDialog(BuildContext context) {
             ],
             title: Center(
                 child: Text(
-              "فلترة العناصر",
-              style: TextStyle(color: Colors.black),
-            )),
+                  "فلترة العناصر",
+                  style: TextStyle(color: Colors.black),
+                )),
             content: SingleChildScrollView(
               child: Column(
                 children: <Widget>[
@@ -379,7 +356,7 @@ Future<void> showFilterDialog(BuildContext context) {
                             checkBoxActiveColor: Colors.redAccent,
                             dialogShapeBorder: RoundedRectangleBorder(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(5)),
+                              BorderRadius.all(Radius.circular(5)),
                             ),
                             title: Text(
                                 "اختر من القائمة التالية الجوانب المفضلة لديك:",

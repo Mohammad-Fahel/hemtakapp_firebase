@@ -2,10 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hemtak_app/HomePage/HomePageOfVolunteer.dart';
-import 'package:hemtak_app/mahmoud/ChangeEmail.dart';
-import 'package:hemtak_app/mahmoud/ChangePhone.dart';
-import 'package:hemtak_app/mahmoud/Changepassword.dart';
-import 'package:hemtak_app/mahmoud/ChangeLocation.dart';
+import 'package:hemtak_app/slideMenu/volunter/ChangeEmail.dart';
+import 'package:hemtak_app/slideMenu/volunter/ChangePhone.dart';
+import 'package:hemtak_app/slideMenu/volunter/Changepassword.dart';
+import 'package:hemtak_app/slideMenu/volunter/ChangeLocation.dart';
 
 class Setting extends StatefulWidget {
   @override

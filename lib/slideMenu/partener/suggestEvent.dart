@@ -3,8 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:hemtak_app/HomePage/HomePageOfPartner.dart';
 import 'package:hemtak_app/HomePage/HomePageOfVolunteer.dart';
-import 'package:hemtak_app/mahmoud/Suggest.dart';
+import 'package:hemtak_app/slideMenu/volunter/Suggest.dart';
 import 'package:ndialog/ndialog.dart';
 
 class SuggestEvent extends StatefulWidget {
@@ -70,7 +71,7 @@ class _SuggestEventState extends State<SuggestEvent> {
           actions: [
             FlatButton(
               onPressed: () => Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => HomePageVolunteer())),
+                  MaterialPageRoute(builder: (context) => HomePagePartner())),
               child: Text("موافق", style: TextStyle(color: Colors.redAccent)),
             ),
           ],

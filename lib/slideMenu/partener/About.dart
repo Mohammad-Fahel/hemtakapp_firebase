@@ -1,6 +1,7 @@
 import 'dart:ui';
+import 'package:hemtak_app/HomePage/HomePageOfPartner.dart';
 import 'package:hemtak_app/HomePage/HomePageOfVolunteer.dart';
-import 'package:hemtak_app/mahmoud/Setting.dart';
+import 'package:hemtak_app/slideMenu/volunter/Setting.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:core';
 import 'package:flutter/cupertino.dart';
@@ -57,7 +58,7 @@ class _AboutState extends State<About> {
         leading: IconButton(
           icon: Icon(Icons.arrow_back_ios, color: Colors.white),
           onPressed: () => Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) => HomePageVolunteer())),
+              MaterialPageRoute(builder: (context) => HomePagePartner())),
         ),
         centerTitle: true,
         title: Text("عن التطبيق",

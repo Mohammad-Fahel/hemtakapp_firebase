@@ -1,5 +1,6 @@
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
+import 'package:hemtak_app/HomePage/HomePageOfPartner.dart';
 import 'package:hemtak_app/HomePage/HomePageOfVolunteer.dart';
 
 //import 'SuggestList.dart';
@@ -91,7 +92,7 @@ class _SuggestState extends State<Suggest> {
             color: Colors.white,
           ),
           onPressed: () => Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) => HomePageVolunteer())),
+              MaterialPageRoute(builder: (context) => HomePagePartner())),
         ),
         centerTitle: true,
         title: Text(
@@ -99,19 +100,19 @@ class _SuggestState extends State<Suggest> {
           style: TextStyle(fontSize: 20.0, color: Colors.white),
         ),
         actions: [
-          IconButton(
-            icon: Icon(
-              Icons.add,
-              size: 30,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SuggestEvent()),
-              );
-            },
-          ),
+          // IconButton(
+          //   icon: Icon(
+          //     Icons.add,
+          //     size: 30,
+          //     color: Colors.white,
+          //   ),
+          //   onPressed: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(builder: (context) => SuggestEvent()),
+          //     );
+          //   },
+          // ),
         ],
       ),
       backgroundColor: Colors.grey[300],
