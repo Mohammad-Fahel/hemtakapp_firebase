@@ -79,7 +79,7 @@ class _WelcomePageState extends State<WelcomePage> {
           border: Border.all(color: Colors.white, width: 2),
         ),
         child: Text(
-          "خيار الشركاء",
+          "خيار الداعمين",
           style: TextStyle(fontSize: 20, color: Colors.white),
         ),
       ),

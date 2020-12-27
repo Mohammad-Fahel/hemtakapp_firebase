@@ -49,7 +49,7 @@ class _PartnerPageState extends State<PartnerPage> {
             ],
             color: Colors.white),
         child: Text(
-          " تسجيل الدخول كشريك",
+          " تسجيل الدخول",
           style: TextStyle(fontSize: 20, color: Color(0xFFE53935)),
         ),
       ),
@@ -70,7 +70,7 @@ class _PartnerPageState extends State<PartnerPage> {
             borderRadius: BorderRadius.all(Radius.circular(5)),
             border: Border.all(color: Colors.white, width: 2)),
         child: Text(
-          "إنشاء حساب شريك",
+          "إنشاء حساب",
           style: TextStyle(fontSize: 20, color: Colors.white),
         ),
       ),
@@ -255,7 +255,7 @@ class _SignInPartnerState extends State<SignInPartner> {
                   end: Alignment.centerRight,
                   colors: [Color(0xfff44336), Color(0xffe57373)])),
           child: Text(
-            'تسجيل الدخول كشريك',
+            'تسجيل الدخول',
             style: TextStyle(fontSize: 20, color: Colors.white),
           ),
         ),

@@ -1,7 +1,5 @@
 import 'dart:ui';
 import 'package:hemtak_app/HomePage/HomePageOfPartner.dart';
-import 'package:hemtak_app/HomePage/HomePageOfVolunteer.dart';
-import 'package:hemtak_app/slideMenu/volunter/Setting.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'dart:core';
 import 'package:flutter/cupertino.dart';
@@ -81,9 +79,9 @@ class _AboutState extends State<About> {
             ),
             SizedBox(height: 30),
             Text(
-              "يقوم تطبيق همتك على تعزيز الروح الريادية"
-                  "لدى الشباب الأردني وذلك عن طريق إجراء"
-                  "فعاليات ريادية في مجالات عدة، بهدف دعم"
+              "يقوم تطبيق همتك على تعزيز الروح الريادية "
+                  "لدى الشباب الأردني وذلك عن طريق إجراء "
+                  "فعاليات ريادية في مجالات عدة، بهدف دعم "
                   "أصحاب المشاريع الناشئة والأفكار المبتكرة.",
               style: TextStyle(
                 fontSize: 25.0,

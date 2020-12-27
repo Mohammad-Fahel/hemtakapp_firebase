@@ -32,7 +32,7 @@ dependencies:
   flutter_spinkit: ^4.1.2+1
   firebase_core: ^0.5.3
   firebase_auth: ^0.18.3+1
-  cloud_firestore: ^0.14.3
+  cloud_firestore:
   expandable: ^3.0.1
   pin_code_fields: ^6.0.0
   pin_entry_text_field: ^0.1.3
@@ -69,6 +69,11 @@ flutter:
     - assets/images/disability.jpeg
     - assets/logos/GoldenGym.png
     - assets/logos/fireFly.png
+    - assets/images/markting.png
+    - assets/images/hhh.png
+    - assets/images/Leadership.jpg
+    - assets/images/jordan_background.jpg
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

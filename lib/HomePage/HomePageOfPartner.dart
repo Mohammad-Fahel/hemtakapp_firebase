@@ -1,22 +1,16 @@
 import 'dart:ui';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:hemtak_app/HomePage/insideEvent.dart';
 import 'package:hemtak_app/slideMenu/partener/About.dart';
 import 'package:hemtak_app/slideMenu/partener/CodeRedeemingPage.dart';
 import 'package:hemtak_app/slideMenu/partener/Setting.dart';
-import 'package:hemtak_app/slideMenu/partener/Suggest.dart';
 import 'package:hemtak_app/services/hemtak.dart';
-import 'package:hemtak_app/services/user.dart';
+import 'package:hemtak_app/slideMenu/partener/acceptableEvents.dart';
+import 'package:hemtak_app/slideMenu/partener/insideEvent.dart';
 import 'package:hemtak_app/ui/partnerScreens.dart';
-import 'package:hemtak_app/ui/signInScreen.dart';
-import 'package:hemtak_app/ui/welcomePage.dart';
 import 'package:multiselect_formfield/multiselect_formfield.dart';
 import 'package:hemtak_app/services/auth.dart';
 import 'package:hemtak_app/services/database.dart';
 import 'package:provider/provider.dart';
-import 'package:hemtak_app/services/hemtak_list.dart';
-import 'package:hemtak_app/services/hemtak.dart';
 
 
 
@@ -58,7 +52,7 @@ class _HomePagePartnerState extends State<HomePagePartner> {
                 children: <Widget>[
                   SizedBox(width: 10),
                   Image.asset(
-                    "assets/images/v.png",
+                    "assets/images/Leadership.jpg",
                     width: 75,
                   ),
                   SizedBox(width: 10),
@@ -127,11 +121,11 @@ class _HomePagePartnerState extends State<HomePagePartner> {
       width: 140,
       height: 120,
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.80),
+        color: Colors.white.withOpacity(.5),
         borderRadius: BorderRadius.all(Radius.circular(30)),
         boxShadow: <BoxShadow>[
           BoxShadow(
-              color: Colors.red[300].withOpacity(0.6),
+              color: Colors.red[300].withOpacity(0.3),
               blurRadius: 5,
               spreadRadius: 3)
         ],
@@ -162,7 +156,7 @@ class _HomePagePartnerState extends State<HomePagePartner> {
             child: Column(
               children: [
                 Icon(Icons.person_pin, size: 100),
-                Text("اسم الشريك",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20))
+                Text("اسم الداعم",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20))
               ],
             ),
             decoration: BoxDecoration(color: Colors.grey),
@@ -186,6 +180,12 @@ class _HomePagePartnerState extends State<HomePagePartner> {
           title: Text('تحصيل النقاط'),
           onTap: () => Navigator.pushReplacement(context,
               MaterialPageRoute(builder: (context) => CodeRedeeming())),
+        ),
+        ListTile(
+          leading: Icon(Icons.accessibility),
+          title: Text('الفعاليات المقبولة'),
+          onTap: () => Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => AcceptableEvents())),
         ),
         Container(
           height: 2,
@@ -234,7 +234,7 @@ class _HomePagePartnerState extends State<HomePagePartner> {
                         bottomRight: Radius.circular(30.0),
                       ),
                       image: DecorationImage(
-                          image: AssetImage("assets/images/jordan3.png"),
+                          image: AssetImage("assets/images/jordan_background.jpg"),
                           fit: BoxFit.cover)),
                   child: ClipRRect(
                       child: BackdropFilter(

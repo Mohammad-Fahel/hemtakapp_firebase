@@ -1,13 +1,14 @@
 import 'dart:ui';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:hemtak_app/HomePage/insideEvent.dart';
+import 'package:hemtak_app/slideMenu/volunter/acceptableEvents.dart';
 import 'package:hemtak_app/slideMenu/volunter/About.dart';
 import 'package:hemtak_app/slideMenu/volunter/CodeRedeemingPage.dart';
 import 'package:hemtak_app/slideMenu/volunter/Setting.dart';
 import 'package:hemtak_app/slideMenu/volunter/Suggest.dart';
 import 'package:hemtak_app/services/hemtak.dart';
 import 'package:hemtak_app/services/user.dart';
+import 'package:hemtak_app/slideMenu/volunter/insideEvent.dart';
 import 'package:hemtak_app/ui/signInScreen.dart';
 import 'package:hemtak_app/ui/welcomePage.dart';
 import 'package:multiselect_formfield/multiselect_formfield.dart';
@@ -68,7 +69,7 @@ class _HomePageVolunteerState extends State<HomePageVolunteer> {
                 children: <Widget>[
                   SizedBox(width: 10),
                   Image.asset(
-                    "assets/images/v.png",
+                    "assets/images/Leadership.jpg",
                     width: 75,
                   ),
                   SizedBox(width: 10),
@@ -137,11 +138,11 @@ class _HomePageVolunteerState extends State<HomePageVolunteer> {
       width: 140,
       height: 120,
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.80),
+        color: Colors.white.withOpacity(0.5),
         borderRadius: BorderRadius.all(Radius.circular(30)),
         boxShadow: <BoxShadow>[
           BoxShadow(
-              color: Colors.red[300].withOpacity(0.6),
+              color: Colors.red[300].withOpacity(0.3),
               blurRadius: 5,
               spreadRadius: 3)
         ],
@@ -180,7 +181,7 @@ class _HomePageVolunteerState extends State<HomePageVolunteer> {
         ),
 
         ListTile(
-          leading: Icon(Icons.assignment_turned_in),
+          leading: Icon(Icons.accessibility),
           title: Text('بادر'),
           onTap: () => Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (context) => Suggest())),
@@ -202,6 +203,12 @@ class _HomePageVolunteerState extends State<HomePageVolunteer> {
           title: Text('تحصيل النقاط'),
           onTap: () => Navigator.pushReplacement(context,
               MaterialPageRoute(builder: (context) => CodeRedeeming())),
+        ),
+        ListTile(
+          leading: Icon(Icons.assignment_turned_in),
+          title: Text('الفعاليات المقبولة'),
+          onTap: () => Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (context) => AcceptableEvents())),
         ),
         Container(
           height: 2,
@@ -257,7 +264,7 @@ class _HomePageVolunteerState extends State<HomePageVolunteer> {
                         bottomRight: Radius.circular(30.0),
                       ),
                       image: DecorationImage(
-                          image: AssetImage("assets/images/jordan3.png"),
+                          image: AssetImage("assets/images/jordan_background.jpg"),
                           fit: BoxFit.cover)),
                   child: ClipRRect(
                       child: BackdropFilter(

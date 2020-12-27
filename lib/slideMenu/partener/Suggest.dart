@@ -125,26 +125,6 @@ class _SuggestState extends State<Suggest> {
               color: Colors.grey[400],
               child: Row(
                 children: <Widget>[
-                  //     _icon(context, showicon),
-
-                  /* IconButton(
-                    iconSize: 50,
-                    color: Colors.red[800],
-                    tooltip: _controller.expanded ? "Collapse" : "Expand",
-                    icon: _controller.expanded
-                        ? Icon(Icons.expand_less)
-                        : Icon(Icons.expand_more),
-                    onPressed: () {
-                      if(_controller.expanded=="Collapse"){
-                      }
-                      else
-                        {
-                        }
-                      setState(() {
-                        _controller.toggle();
-                      });
-                    },
-                  ),*/
                   SizedBox(width: 20.0),
                   Text(
                     'الفعاليات الريادية المقبولة مسبقًا:',

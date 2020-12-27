@@ -29,11 +29,11 @@ class _InsideEventState extends State<InsideEvent> {
           child: Column(
             children: [
               Image.asset(
-                "assets/images/disability.jpeg",
+                "assets/images/markting.png",
                 width: 370,
                 height: 270,
               ),
-              Text("مساعدة ذوي الاحتياجات الخاصة في ممارسة الرياضة",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17.5)),
+              Text("التسويق الإلكتروني",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17.5)),
               SizedBox(height: 10),
               Container(
                 color: Colors.black45,
@@ -41,7 +41,10 @@ class _InsideEventState extends State<InsideEvent> {
                 height: 1.5,
               ),
               SizedBox(height: 10),
-              Text("يقوم المتطوعيون بالانقسام إلى قسمين، القسم الأول بمساعدة الأشخاص ذوي الاحتياجات الخاصةفي ممارسة أنواع جديدة من الرياضة وبطرق مبتكرة تناسيهم وتناسب احتياجاتهم، والقسم الثاني يقوم بترتيب وتنظيم الحدث",style: TextStyle(fontWeight: FontWeight.normal,fontSize: 17.5),textAlign: TextAlign.center),
+
+              Text('تنظم مبادرة نشامى ونشميات الأردن ورشات تفاعلية حوارية، يتحدث فيها المدرب مع الرياديين حول التسويق الإلكتروني، وتهدف الورشة إلى التعرف على مزايا التسويق الإلكتروني وأفضل طرق التسويق ونجاحه. ويتم ذلك عن طريق بعض النشاطات التفاعلية عبر وسائل التواصل الاجتماعي'
+
+                  ,style: TextStyle(fontWeight: FontWeight.normal,fontSize: 17.5),textAlign: TextAlign.center),
               SizedBox(height: 10),
               Container(
                 color: Colors.black45,
@@ -85,7 +88,7 @@ class _InsideEventState extends State<InsideEvent> {
                         Row(
                           children: [
                             Icon(Icons.people),
-                            Text("المتطوعون: ", style: TextStyle(fontWeight: FontWeight.bold)),
+                            Text("الرياديون: ", style: TextStyle(fontWeight: FontWeight.bold)),
                             Text("20-30 "),
                           ],
                         )
@@ -147,7 +150,7 @@ class _InsideEventState extends State<InsideEvent> {
                             end: Alignment.centerRight,
                             colors: [Color(0xfff44336), Color(0xffe57373)])),
                     child: Text(
-                      'تطوع الآن',
+                      'ادعم!',
                       style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
                   )),

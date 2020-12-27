@@ -146,7 +146,7 @@ class _SuggestState extends State<Suggest> {
                   ),*/
                   SizedBox(width: 20.0),
                   Text(
-                    'الفعاليات الريادية المقبولة مسبقًا:',
+                    'الفعاليات الريادية المقترحة المقبولة مسبقًا:',
                     style: TextStyle(
                       fontSize: 20.0,
                     ),
