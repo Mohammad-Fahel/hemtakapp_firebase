@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:hemtak_app/HomePage/HomePageOfPartner.dart';
 import 'package:hemtak_app/HomePage/HomePageOfVolunteer.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -82,7 +83,7 @@ class _CodeRedeemingState extends State<CodeRedeeming> {
             color: Colors.white,
           ),
             onPressed: () =>  Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => HomePageVolunteer())),
+                MaterialPageRoute(builder: (context) => HomePagePartner())),
         ),
         centerTitle: true,
         title:
